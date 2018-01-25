@@ -112,17 +112,11 @@ var quickNav = function() {
 
 	var style = document.createElement('link');
 	style.rel = 'stylesheet';
-	style.href = chrome.extension.getURL('outline.css');
+	style.href = 'https://xi.github.io/a11y-outline/outline.css';
 	dialog.appendChild(style);
 
 	updateVisiblePane(select, dialog);
 	dialog.showModal();
 };
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-	if (request === 'showA11yOutline' && sender) {
-		if (!document.getElementById(DIALOG_ID)) {
-			quickNav();
-		}
-	}
-});
+quickNav();
