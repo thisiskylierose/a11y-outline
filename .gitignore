@@ -1,4 +1,5 @@
 node_modules
+dist
 /outline.js
 /outline.min.js
 bundle.zip

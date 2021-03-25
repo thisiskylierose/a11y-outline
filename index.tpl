@@ -13,6 +13,5 @@
         text-align: center;
     }
 </style>
-
 <p>Simply drag this link to your bookmarks bar or try by just clicking it.</p>
-<a href="javascript:(function(){__JS__})()">a11y-outline</a>
+<a href="javascript:var exports = {};{__JS__}">a11y-outline</a>

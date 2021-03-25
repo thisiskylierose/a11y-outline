@@ -1,0 +1,8 @@
+.editorconfig
+.babelrc
+.eslintrc
+.prettierrc
+package-lock.json
+*.md
+*.log
+*.min.*

@@ -14,11 +14,11 @@ outline.js: src/outline.js src/*.js node_modules
 outline.min.js: outline.js
 	uglifyjs $< -o $@
 
-outline.css: src/outline.scss node_modules
-	node-sass $< $@
+# outline.css: src/outline.scss node_modules
+# 	node-sass $< $@
 
 node_modules:
-	npm install aria-api dialog-polyfill
+	npm install aria-api browserify dialog-polyfill
 
 clean:
 	rm -f outline.js outline.css
