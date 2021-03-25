@@ -1,18 +1,15 @@
 {
   "manifest_version": 2,
-
   "name": "a11y-outline",
   "description": "navigate page outlines easily",
   "version": "1.0.3",
   "icons": {
     "128": "icon-128.png"
   },
-
   "browser_action": {
     "default_icon": "icon-128.png",
     "default_title": "A11y Outline"
   },
-
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
@@ -20,22 +17,16 @@
       }
     }
   },
-
   "background": {
     "scripts": ["bg.js"],
     "persistent": false
   },
-
-  "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["outline.js"]
-  }],
-
-  "permissions": [
-    "<all_urls>"
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["outline.js"]
+    }
   ],
-
-  "web_accessible_resources": [
-    "outline.css"
-  ]
+  "permissions": ["<all_urls>"],
+  "web_accessible_resources": ["outline.css"]
 }
